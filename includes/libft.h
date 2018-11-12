@@ -6,7 +6,7 @@
 /*   By: ficoppol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 12:08:35 by ficoppol          #+#    #+#             */
-/*   Updated: 2018/11/12 17:13:24 by ficoppol         ###   ########.fr       */
+/*   Updated: 2018/11/12 18:26:08 by ficoppol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdlib.h>
 # include <string.h>
 
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
 char	*ft_strncat(char *dst, const char *src, size_t len);
 char	*ft_strcat(char *dst, const char *src);
 char	*ft_strncpy(char *dst, const char *src, size_t len);

@@ -6,13 +6,14 @@
 /*   By: ficoppol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 12:06:10 by ficoppol          #+#    #+#             */
-/*   Updated: 2018/11/12 14:56:23 by ficoppol         ###   ########.fr       */
+/*   Updated: 2018/11/12 17:41:12 by ficoppol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-static unsigned char		*apply(unsigned char *str, int c, size_t len, size_t str_len)
+static unsigned char		*apply(unsigned char *str, int c, size_t len,
+		size_t str_len)
 {
 	while (str_len < len)
 	{
