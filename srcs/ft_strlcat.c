@@ -6,7 +6,7 @@
 /*   By: ficoppol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 17:46:34 by ficoppol          #+#    #+#             */
-/*   Updated: 2018/11/12 18:26:13 by ficoppol         ###   ########.fr       */
+/*   Updated: 2018/11/12 19:59:57 by ficoppol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static size_t	ft_strnlen(const char *str, size_t n)
 	return (len);
 }
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+size_t			ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t dst_len;
 	size_t src_len;

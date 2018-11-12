@@ -6,7 +6,7 @@
 /*   By: ficoppol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 12:08:35 by ficoppol          #+#    #+#             */
-/*   Updated: 2018/11/12 18:26:08 by ficoppol         ###   ########.fr       */
+/*   Updated: 2018/11/12 20:11:06 by ficoppol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,13 @@
 # include <stdlib.h>
 # include <string.h>
 
+int		ft_atoi(const char *str);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_strcmp(const char *s1, const char *s2);
+char	*ft_strnstr(const char *str, const char *to_find, size_t len);
+char	*ft_strstr(const char *str, const char *to_find);
+char	*ft_strrchr(const char *str, int c);
+char	*ft_strchr(const char *str, int c);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 char	*ft_strncat(char *dst, const char *src, size_t len);
 char	*ft_strcat(char *dst, const char *src);
