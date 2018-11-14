@@ -6,7 +6,7 @@
 /*   By: ficoppol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 20:08:57 by ficoppol          #+#    #+#             */
-/*   Updated: 2018/11/12 20:11:02 by ficoppol         ###   ########.fr       */
+/*   Updated: 2018/11/14 17:14:11 by ficoppol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 static int		skip_whites(char *str, int i)
 {
-		while (str[i] == '\n' || str[i] == '\t' || str[i] == '\v'
-						|| str[i] == '\f' || str[i] == '\r' || str[i] == ' ')
-				i++;
-		return (i);
+	while (str[i] == '\n' || str[i] == '\t' || str[i] == '\v'\
+			|| str[i] == '\f' || str[i] == '\r' || str[i] == ' ')
+		i++;
+	return (i);
 }
 
 int				ft_atoi(const char *str)
@@ -26,20 +26,17 @@ int				ft_atoi(const char *str)
 	int			neg;
 	int			i;
 
+	num = 0;
 	neg = 1;
-	count = 0;
 	i = skip_whites((char*)str, 0);
 	if (str[i] == '-')
-			neg = -neg;
+		neg = -neg;
 	if (str[i] == '+' || str[i] == '-')
-			i++;
+		i++;
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-			num = (num * 10) + (str[i] - 48);
-			i++;
-			count++;
+		num = (num * 10) + (str[i] - 48);
+		i++;
 	}
-	if (neg < 0)
-			return ((int)-num);
-	return ((int)num);
+	return ((int)(num * neg));
 }

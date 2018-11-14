@@ -1,29 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ficoppol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/14 16:15:47 by ficoppol          #+#    #+#             */
-/*   Updated: 2018/11/14 16:19:50 by ficoppol         ###   ########.fr       */
+/*   Created: 2018/11/14 18:08:09 by ficoppol          #+#    #+#             */
+/*   Updated: 2018/11/14 18:39:04 by ficoppol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+void	ft_putnbr_fd(int n, int fd)
 {
-	char	*str;
-	int		i;
+	long int nb;
 
-	i = 0;
-	if (!(s) || !(str = ft_memalloc(len + 1)))
-		return (NULL);
-	while (len--)
+	if (n == -2147483648)
 	{
-		str[i] = s[start + i];
-		i++;
+		ft_putnbr_fd(-2, fd);
+		nb = 147483648;
 	}
-	return (str);
+	else if (n < 0)
+	{
+		nb = -n;
+		ft_putchar_fd('-', fd);
+	}
+	else
+		nb = n;
+	if (nb == 0)
+		ft_putchar_fd('0', fd);
+	else if (nb > 9)
+	{
+		ft_putnbr_fd(nb / 10, fd);
+		ft_putchar_fd(((nb % 10) + 48), fd);
+	}
+	else if (nb < 10)
+		ft_putchar_fd((nb + 48), fd);
 }

@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ficoppol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/14 16:15:47 by ficoppol          #+#    #+#             */
-/*   Updated: 2018/11/14 16:19:50 by ficoppol         ###   ########.fr       */
+/*   Created: 2018/11/14 18:39:45 by ficoppol          #+#    #+#             */
+/*   Updated: 2018/11/14 18:42:04 by ficoppol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+void	ft_putchar(char c)
 {
-	char	*str;
-	int		i;
-
-	i = 0;
-	if (!(s) || !(str = ft_memalloc(len + 1)))
-		return (NULL);
-	while (len--)
-	{
-		str[i] = s[start + i];
-		i++;
-	}
-	return (str);
+	ft_putchar_fd(c, 1);
 }
