@@ -6,13 +6,13 @@
 /*   By: ficoppol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 15:35:19 by ficoppol          #+#    #+#             */
-/*   Updated: 2018/11/14 18:58:18 by ficoppol         ###   ########.fr       */
+/*   Updated: 2018/11/14 19:59:26 by ficoppol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-int		isalpha(int c)
+int		ft_isalpha(int c)
 {
 	if ((c >= 65 && c <= 90)\
 			|| (c >= 97 && c <= 122))

@@ -6,7 +6,7 @@
 /*   By: ficoppol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 15:41:36 by ficoppol          #+#    #+#             */
-/*   Updated: 2018/11/14 16:19:28 by ficoppol         ###   ########.fr       */
+/*   Updated: 2018/11/14 19:33:29 by ficoppol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (NULL);
 	while (s[len])
 	{
-		str[len] = (f)(len, s);
+		str[len] = (f)(len, (char)s[len]);
 		len++;
 	}
 	return (str);

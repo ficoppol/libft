@@ -6,7 +6,7 @@
 /*   By: ficoppol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 15:31:46 by ficoppol          #+#    #+#             */
-/*   Updated: 2018/11/14 15:34:39 by ficoppol         ###   ########.fr       */
+/*   Updated: 2018/11/14 19:59:44 by ficoppol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_isalnum(int c)
 {
-	if ((ft_isdigit(c)) && (ft_isalpha(c)))
+	if ((ft_isdigit(c)) || (ft_isalpha(c)))
 		return (1);
 	return (0);
 }

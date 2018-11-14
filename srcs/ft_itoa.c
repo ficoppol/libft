@@ -6,7 +6,7 @@
 /*   By: ficoppol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 16:42:31 by ficoppol          #+#    #+#             */
-/*   Updated: 2018/11/14 17:43:33 by ficoppol         ###   ########.fr       */
+/*   Updated: 2018/11/14 19:29:21 by ficoppol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,6 @@ char			*ft_itoa(int n)
 	int			size;
 	long int	conv;
 	int			neg;
-	int			i;
 
 	neg = 0;
 	size = 0;
