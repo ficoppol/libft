@@ -6,7 +6,7 @@
 /*   By: ficoppol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 16:51:11 by ficoppol          #+#    #+#             */
-/*   Updated: 2018/11/12 16:52:45 by ficoppol         ###   ########.fr       */
+/*   Updated: 2018/11/14 22:43:17 by ficoppol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ char	*ft_strcpy(char *dst, const char *src)
 		dst[len] = src[len];
 		len++;
 	}
+	dst[len] = '\0';
 	return (dst);
 }
