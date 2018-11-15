@@ -6,7 +6,7 @@
 /*   By: ficoppol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 15:38:05 by ficoppol          #+#    #+#             */
-/*   Updated: 2018/11/14 18:59:01 by ficoppol         ###   ########.fr       */
+/*   Updated: 2018/11/15 22:30:03 by ficoppol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_strclr(char *s)
 {
-	ft_bzero(s, (ft_strlen(s) + 1));
+	if (s)
+		ft_bzero(s, (ft_strlen(s) + 1));
 }

@@ -6,7 +6,7 @@
 /*   By: ficoppol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 15:45:22 by ficoppol          #+#    #+#             */
-/*   Updated: 2018/11/14 16:15:19 by ficoppol         ###   ########.fr       */
+/*   Updated: 2018/11/15 23:41:40 by ficoppol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,8 @@ char			**ft_strsplit(char const *s, char c)
 	int				count;
 	int				i;
 
+	if (!(s))
+		return (NULL);
 	count = 0;
 	i = 0;
 	while (s[i])

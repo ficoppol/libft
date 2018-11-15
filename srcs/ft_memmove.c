@@ -6,7 +6,7 @@
 /*   By: ficoppol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 15:22:53 by ficoppol          #+#    #+#             */
-/*   Updated: 2018/11/15 00:26:40 by ficoppol         ###   ########.fr       */
+/*   Updated: 2018/11/15 17:40:50 by ficoppol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,32 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	void *tmp;
+	char	*tmp_src;
+	char	*tmp_dst;
+	size_t	i;
 
-	tmp = ft_memalloc(len + 1);
-	ft_memcpy(tmp, src, len);
-	ft_memcpy(dst, tmp, len);
+	i = -1;
+	tmp_src = (char *)src;
+	tmp_dst = (char *)dst;
+	if (tmp_src < tmp_dst)
+		while ((int)(--len) >= 0)
+			*(tmp_dst + len) = *(tmp_src + len);
+	else
+		while (++i < len)
+			*(tmp_dst + i) = *(tmp_src + i);
 	return (dst);
+//	char	*srcc;
+//	char	*dstc;
+//	size_t	i;
+//
+//	i = -1;
+//	srcc = (char *)src;
+//	dstc = (char *)dst;
+//	if (srcc < dstc)
+//		while ((int)(--len) >= 0)
+//			*(dstc + len) = *(srcc + len);
+//	else
+//		while (++i < len)
+//			*(dstc + i) = *(srcc + i);
+//	return (dst);
 }

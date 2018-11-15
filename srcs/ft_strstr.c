@@ -6,7 +6,7 @@
 /*   By: ficoppol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 19:10:04 by ficoppol          #+#    #+#             */
-/*   Updated: 2018/11/14 19:34:01 by ficoppol         ###   ########.fr       */
+/*   Updated: 2018/11/15 18:01:03 by ficoppol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ char	*ft_strstr(const char *str, const char *to_find)
 			if (to_find[to_find_len] == '\0')
 				return ((char*)&str[tmp_str_len]);
 		}
+		str_len = tmp_str_len;
 		str_len++;
 	}
 	return (NULL);

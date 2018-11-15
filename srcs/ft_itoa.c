@@ -6,7 +6,7 @@
 /*   By: ficoppol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 16:42:31 by ficoppol          #+#    #+#             */
-/*   Updated: 2018/11/14 19:29:21 by ficoppol         ###   ########.fr       */
+/*   Updated: 2018/11/15 23:56:15 by ficoppol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static char		*ft_makestr(char *str, size_t size, long int conv, int neg)
 {
-	size = size - 2;
+	size = size - 1;
 	if (conv == 0)
 		str[0] = '0';
 	else
@@ -31,18 +31,21 @@ static char		*ft_makestr(char *str, size_t size, long int conv, int neg)
 	return (str);
 }
 
-static size_t	get_size(int nb)
+static size_t	get_size(long int nb)
 {
 	size_t size;
 
 	size = 0;
+	if (nb == 0)
+	{
+		size++;
+		return (size);
+	}
 	while (nb > 0)
 	{
 		nb = nb / 10;
 		size++;
 	}
-	if (nb == 0)
-		size++;
 	return (size);
 }
 
@@ -55,18 +58,16 @@ char			*ft_itoa(int n)
 
 	neg = 0;
 	size = 0;
+	conv = n;
 	if (n < 0)
 	{
-		conv = -n;
-		size = get_size(-n);
+		conv = -conv;
+		size = get_size(conv);
 		size++;
 		neg = 1;
 	}
 	else
-	{
 		size = get_size(n);
-		conv = n;
-	}
 	if (!(str = ft_memalloc(size + 1)))
 		return (NULL);
 	str = ft_makestr(str, size, conv, neg);

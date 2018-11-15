@@ -6,7 +6,7 @@
 /*   By: ficoppol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 15:39:31 by ficoppol          #+#    #+#             */
-/*   Updated: 2018/11/14 19:01:17 by ficoppol         ###   ########.fr       */
+/*   Updated: 2018/11/15 22:48:48 by ficoppol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	{
 		while (s[len])
 		{
-			(f)(len, s);
+			(f)(len, (s + len));
 			len++;
 		}
 	}
