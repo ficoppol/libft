@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ficoppol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/14 17:45:28 by ficoppol          #+#    #+#             */
-/*   Updated: 2018/11/16 09:28:09 by ficoppol         ###   ########.fr       */
+/*   Created: 2018/11/16 10:58:33 by ficoppol          #+#    #+#             */
+/*   Updated: 2018/11/16 11:04:58 by ficoppol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_lstadd(t_list **alst, t_list *new)
 {
-	write(fd, &c, 1);
+	new->next = *alst;
+	*alst = new;
 }

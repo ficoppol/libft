@@ -6,7 +6,7 @@
 /*   By: ficoppol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 15:38:44 by ficoppol          #+#    #+#             */
-/*   Updated: 2018/11/15 22:56:08 by ficoppol         ###   ########.fr       */
+/*   Updated: 2018/11/16 09:21:43 by ficoppol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int		ft_strequ(char const *s1, char const *s2)
 {
 	if (!s1 || !s2)
-			return (0);
+		return (0);
 	if (ft_strcmp(s1, s2) != 0)
 		return (0);
 	return (1);

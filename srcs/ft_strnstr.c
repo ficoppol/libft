@@ -6,7 +6,7 @@
 /*   By: ficoppol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 19:21:15 by ficoppol          #+#    #+#             */
-/*   Updated: 2018/11/15 18:08:50 by ficoppol         ###   ########.fr       */
+/*   Updated: 2018/11/16 09:22:11 by ficoppol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 	size_t tmp_str_len;
 
 	if (!ft_strlen(to_find))
-			return((char*)str);
+		return ((char*)str);
 	str_len = 0;
 	while (str_len < len && str[str_len])
 	{

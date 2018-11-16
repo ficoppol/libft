@@ -6,7 +6,7 @@
 /*   By: ficoppol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 16:42:51 by ficoppol          #+#    #+#             */
-/*   Updated: 2018/11/12 16:45:22 by ficoppol         ###   ########.fr       */
+/*   Updated: 2018/11/16 18:25:37 by ficoppol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ size_t	ft_strlen(const char *str)
 {
 	size_t len;
 
+	if (!str)
+		return (0);
 	len = 0;
 	while (str[len])
 		len++;
